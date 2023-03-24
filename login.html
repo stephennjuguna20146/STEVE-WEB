@@ -1,0 +1,75 @@
+<html>
+  <title>LOGIN</title>
+    <head>
+  
+    <style>
+      a {
+        font-size: 50px; 
+     }
+      #home {
+        width: 46px;
+        height: 44px;
+        background: url(img_navsprites.gif) 0 0;
+      }
+      
+      #next {
+        width: 43px;
+        height: 44px;
+        background: url(img_navsprites.gif) -91px 0;
+      }
+    </style>
+    </head> 
+  <body bgcolor="skyblue">
+    <a href="checkout.html" style="float:right">NEXT</a>
+    <a href="home.html">HOME</a><br></br>
+    <form action="action_page.php" style="border:1px solid #ccc">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <h1></h1><a href="index.html">sign up</a><br></br></h1>
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+      
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form><br>
+      <div class >
+      <script>
+        function validateform(){
+        var name=document.myform.name.value;
+        var password=document.myform.password.value;
+        if (name==null || name==""){
+        alert("Name can't be blank");
+        return false;
+        }else if(password.length<6){
+        alert("Password must be at least 6 characters long.");
+        return false;
+        }
+        }
+        </script>
+        <body>
+        <form name="myform" method="post" action="abc.jsp"
+        onsubmit="return validateform()" >
+        Name: <input type="text" name="name"><br/>
+        Password: <input type="password" name="password">
+        <br/>
+        <input type="submit" value="register">
+        </form>
+      </div>
+      <a href="layout.html">EXIT</a><br></br>
+</body>
+</html>
